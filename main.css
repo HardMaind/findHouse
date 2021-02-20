@@ -1,0 +1,141 @@
+/* with Flexbox */
+/* 
+.flex-container{    
+    max-width: 100%;
+    padding: 20px;
+    display: flex;       
+    background-color: rgb(66, 163, 163);       
+} */
+
+/* Navigation */
+
+/* .flex-container .navigation{   */
+    /* background-color:black;   */
+    /* display: flex;
+    flex-wrap:nowrap;  
+    flex: 70%;    
+    padding: 20px 10px;    
+}
+.flex-container .navigation div{
+    padding: 10px; */
+    /* background-color:chocolate; */
+/* 
+}
+.flex-container .navigation div:hover{    
+    background-color:darkgray;
+    border-radius: 5px;
+}
+.flex-container .navigation div a{
+    color: azure; 
+    text-decoration: none;   
+} */
+/* Login and ragistration  */
+
+/* .flex-container .login{ */
+    /* background-color: floralwhite; */
+    /* max-width: 100%;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: flex-end;        
+    flex:30%;       
+    padding: 20px;
+}
+
+.flex-container .login div{
+    padding: 10px;      */
+    /* background-color:chocolate;        */
+/* }
+.flex-container .login div:hover{    
+    background-color:darkgray;
+    border-radius: 5px;
+}
+.flex-container .login div a{
+    color:rgba(0, 0, 0, 0.801); 
+    text-decoration: none;   
+   
+} */
+/* With list */
+
+/* ul{
+    text-decoration: none;
+    list-style-type: none;   
+    background-color: darkkhaki;
+    padding: 10px;
+
+} */
+/* ul li{
+    flex-flow: wrap;
+    align-items: flex-end;
+}
+ul a{
+    align-content:center;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+li a{
+    text-decoration: none;
+} */
+/* @meadia queary with flexbox */
+/* @media (max-width:600px){
+    .flex-container .login{        
+        display: none;        
+    }
+}
+@media (max-width:600px){
+    .flex-container .navigation{ 
+        flex-flow: column;
+    }
+} */
+
+.grid-container{
+    max-width: 100%;
+    background-color: rgb(66, 163, 163);  
+    display:grid;     
+    grid-template-areas: 'navigation navigation navigation navigation login login';      
+    padding: 20px;
+}
+.grid-container .navigation{
+    display: grid;
+    grid-area: navigation;    
+    grid-template-columns: auto auto auto auto;
+    justify-content: start;
+    /* background-color:black;   */
+    padding: 20px 10px;    
+}
+.grid-container .navigation div a{
+    text-decoration: none;
+}
+.grid-container .navigation div {
+    padding: 10px;
+    /* background-color: chocolate; */
+}
+
+.grid-container .login{
+    display: grid;
+    grid-area: login;
+    grid-template-columns: auto auto ;
+    justify-content: end;
+    /* background-color: floralwhite; */
+    padding: 20px 10px;   
+}
+
+.grid-container .login div{
+    padding: 10px;
+    /* background-color: chocolate; */
+}
+.grid-container .login div a{
+    text-decoration: none;
+}
+
+/* @meadia queary with flexbox */
+@media (max-width:600px){
+    .grid-container .login{        
+        display: none;        
+    }
+}
+@media (max-width:600px){
+    .grid-container .navigation div{ 
+        grid-template-columns: auto auto auto auto;
+        grid-column: 1/3;
+    }
+}
