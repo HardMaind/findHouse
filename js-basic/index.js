@@ -48,3 +48,13 @@
 
 // let number =  9007199254740991n;
 // console.log(number + 109n);
+// let fullName;
+let person = {
+    firstName : "idea",
+    lastName  : "code",
+    fullName : function (){
+        return this.firstName + "2" +this.lastName;
+    }
+};
+// document.getElementById("demo").innerHTML = person.fullName();
+// console.log(person.fullName());
