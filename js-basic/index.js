@@ -142,14 +142,14 @@
 //     constructor(name, year) {
 //       this.name = name;
 //       this.year = year;
-  
+
 //     }
 //     age() {
 //       let date = new Date();
 //       return date.getFullYear() - this.year;
 //     }
 //   }
-  
+
 //   let myCar = new Car("Ford", 2013);
 //   document.getElementById("demo").innerHTML = "My car is " + myCar.age() + " years old.";
 
@@ -210,12 +210,12 @@
 //     firstName: "John",
 //     lastName: "",
 //     age: 56,
-    // get ages(){
-    //     return this.age;
-    // }
-    // set lname(lname){
-    //     return this.lastName = lname;
-    // }
+// get ages(){
+//     return this.age;
+// }
+// set lname(lname){
+//     return this.lastName = lname;
+// }
 // }
 // persons.lname = "Doe"; // setter
 // let myStr = JSON.stringify(persons)
@@ -228,3 +228,59 @@
 
 // document.getElementById("demo").innerHTML = "The person age is " + xPersons.age + " year old.";
 
+// class cars{
+//     constructor(brand){
+//         this.carname = brand;
+//     }
+//     present(){
+//         return `I have a ${this.carname},`;
+//     }    
+// }
+// class model extends cars{
+//     constructor(brand,mod){
+//         super(brand)
+//         this.model = mod;
+//     }
+//     show(){ 
+//         return  this.present() + ` it's a model ${this.model}`;
+//     }
+// }
+
+// let mycars = new model("volvo","420");
+// document.getElementById("demo").innerHTML = mycars.show();
+// document.write("hey i am here");
+// document.appendChild("p","Hello");
+
+// let  x =  document.getElementsByTagName("p");
+// document.getElementById("demo").innerHTML = "I am para";
+// document.getElementsByClassName("p.para").innerHTML = "I am para";
+// document.querySelectorAll("p.para").innerHTML = "I am para";
+// function formvalues() {
+//     let frm = document.forms["myForm"];
+//     let text = "";
+//     let i;
+//     for (i = 0; i < frm.length; i++) {
+//         text += frm.elements[i].value + "</br>";
+//     }
+//     document.getElementById("demo").innerHTML = text;
+// }
+
+
+// Animation
+// let id = null;
+// function moveMe(){
+//     let ele = document.getElementById("animate");
+//     let pos = 0;
+//     clearInterval(id);
+//     id = setInterval(frame,10);
+//     function frame(){
+//         if(pos == 350){
+//             clearInterval(id);
+//         }else{
+//             pos++;            
+//             ele.style.bottom = pos + "px";
+//             ele.style.left = pos + "px";
+            
+//         }
+//     }
+// }

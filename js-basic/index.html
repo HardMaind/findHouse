@@ -1,42 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Scrip basic</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .contianer{
+/* 
+        .contianer {
             border: 2px solid saddlebrown;
             background-color: cyan;
             padding: 5px;
-            margin: 5px 0;         
+            margin: 5px 0;
         }
-        .primary-color{
+
+        .primary-color {
             background-color: darkviolet;
         }
-        .text{
+
+        .text {
             font-size: 20px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        #demo{
+
+        #demo {
             font-size: 40px;
+        } */
+        /* #container{
+            position: relative;
+           background-color:darkgray;
+            margin: 50px;            
+            width: 400px;
+            height: 400px;
         }
+        #animate{
+            position:absolute;
+            background-color: darkorange;
+            width: 40px;
+            height: 40px;            
+        } */
+
     </style>
 </head>
+
 <body>
-    <h1><center>Idea2Code</center></h1>
-    <span id="demo"></span>
-    <br>
-    <!-- <form action="" name="myForm" onsubmit="return numberCheck()" method="GET" style="padding: 20px;margin-top: 20px;font-size: 20px;"> -->
-        <!-- Name : <input type="text" name="fname" id="fname"> -->
-        <!-- <input type="number" name="num" id="num1" max="100">
-        <input type="submit" value="submit" onclick="numberCheck()">
-    </form> -->
+    <h1>
+        <center>Idea2Code</center>
+    </h1>
+     <span id="demo"></span>
+    <!--<p class="para"></p>
+    <p id="p1">Hey</p>
+    <p>Hello</p>
+    <br> -->
+    <!-- <form action="" name="myForm"  method="GET" style="padding: 20px;margin-top: 20px;font-size: 20px;"> 
+        Name : <input type="text" name="fname" id="fname" value="Idea2code">
+        <input type="number" name="num" id="num1" max="100" value="100">
+        <input type="submit" value="submit" >      
+    </form>-->
+    <!-- <button onclick="document.getElementById('p1').style.color = 'red'">Test</button> -->
     <!-- <div class="contianer">
         <button id="click" onclick="clicked()">Click Here</button>
     </div>
@@ -52,12 +78,38 @@
     <!-- <p id="hardik">Hello Welcome.</p> -->
     <!-- <button type="button" onclick='document.getElementById("hardik").innerHTML= " welcome to Idea2Code Hardik!"'> Show Emaploy name</button> -->
     <!-- <button type="button" onclick="document.getElementById('hardik').style.fontSize ='20px'">Large font</button> -->
-      <!-- <script src="conditionstatments.js"></script>  -->
+    <!-- <script src="conditionstatments.js"></script>  -->    
+    <!-- <div id="container">
+        <div id="animate">
+        </div>
+    </div>   
+    <button onclick="moveMe()">Move</button> -->
+    <button id="btn">Click</button>
+    <div id="div1" style="background-color: darkorange;">
+        <p id="p1"> I am para One.</p>
+        <p id="p2"> I am para Two.</p>
+    </div>
+    <div style="background-color:darkred;">
+
+    </div>
 </body>
-<script src="index.js"></script>
-<!-- <script>
-
-</script> -->
-</html> 
-
-
+<script>
+    // document.getElementById("btn").addEventListener("click",function(){
+    //     alert("You clicked");
+        
+    //     document.getElementById("demo").innerHTML = "</br>I am available";
+    // });
+   let para = document.createElement("p") ;
+   let node = document.createTextNode("I am New para.");
+   para.appendChild(node);
+   let child = document.getElementById("p2");
+   let child1 = document.getElementById("p1");
+//    document.getElementById("div1").appendChild(para);
+   document.getElementsByTagName("div")[0].insertBefore(para,child);
+//    document.getElementById("p2").remove();
+// document.getElementById("div1").removeChild(child);
+document.getElementById("div1").replaceChild(child,child1);
+</script>
+<script src="index.js">    
+</script>
+</html>
